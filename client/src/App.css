@@ -4,22 +4,22 @@
 }
 
 .spinner {
-  height: 50vmax;
-  width: 50vmax;
+  height: 50vmin;
+  width: 50vmin;
   position: relative;
 }
 
 .name {
   position: absolute;
-  width: 24vmax;
+  width: 24vmin;
   text-align: right;
-  left: 25vmax;
-  top: 25vmax;
-  line-height: 2vmax;
-  font-size: 2vmax;
+  left: 25vmin;
+  top: 25vmin;
+  line-height: 2vmin;
+  font-size: 2vmin;
   display:block;
 }
 .name span {
   display: block;
-  margin-top: -1vmax;
+  margin-top: -1vmin;
 }
