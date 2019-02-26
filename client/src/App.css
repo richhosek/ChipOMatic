@@ -3,23 +3,67 @@
   
 }
 
-.spinner {
-  height: 50vmin;
-  width: 50vmin;
+/* Classes for sizing and positioning the Spinner */ 
+.spinnerContainer {
   position: relative;
 }
 
+.spinnerPointer {
+  position: absolute;
+  right:-1em;
+  top: 23.4vmax;
+  z-index: 100;
+  font-size: 2em;
+}
+
+.spinner {
+  height: 50vmax;
+  width: 50vmax;
+  position: relative;
+}
+
+/* used for positioning the name labes withing the spinner segments */
 .name {
   position: absolute;
-  width: 24vmin;
+  width: 24vmax;
   text-align: right;
-  left: 25vmin;
-  top: 25vmin;
-  line-height: 2vmin;
-  font-size: 2vmin;
+  left: 25vmax;
+  top: 25vmax;
+  line-height: 2vmax;
+  font-size: 2vmax;
   display:block;
+  box-sizing: border-box;
 }
 .name span {
   display: block;
-  margin-top: -1vmin;
+  margin-top: -1vmax;
+}
+
+/* styling the player list that accompanies the spinner */
+.player-list {
+  padding-left: 3em;
+  position: relative;
+}
+
+.nameOutline {
+  border: dotted 2px white;
+}
+
+/* div that displays the winner */
+.winner {
+  position: absolute;
+  width: 100vh;
+  font-size: 3em;
+  margin: 25vh;
+  padding: 1em;
+  background-color: red;
+  z-index: 200;
+  box-shadow: .25em .25em .25em black;
+  border: dotted .125em white;
+}
+
+/* prevent scroll bars from appearing, 
+otherwise the rotation transform will cause it to jump around */
+body {
+  overflow: hidden;
 }
