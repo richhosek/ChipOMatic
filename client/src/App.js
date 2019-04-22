@@ -196,7 +196,7 @@ class App extends Component {
       <div className="App container">
         <h1>Chip-<img src={Chip} style={{
           height: "1em"
-        }} />-Matic</h1>
+        }} />-Matic 2</h1>
         <div
           onClick={this.nextRound}
           className="winner"
