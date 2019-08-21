@@ -44,6 +44,7 @@ class App extends Component {
     this.spin = this
       .spin
       .bind(this);
+    this.nameInput = React.createRef();
   }
 
   componentDidMount() {
@@ -84,7 +85,11 @@ class App extends Component {
         chips: this.state.playerchips
       })
       .then(this.updatePlayers);
-
+    this.setState({
+      playerName: "",
+      playerchips: ""
+    });
+    this.nameInput.current.focus();
   }
 
   count = 10;
@@ -258,7 +263,7 @@ class App extends Component {
           </div>
           <div className="flex-grow-1 player-list">
             <div className="d-flex flex-column">
-              <div className="d-flex">
+              <form className="d-flex">
                 <input
                   ref="nameInput"
                   onChange={this.handleInputChange}
@@ -278,7 +283,7 @@ class App extends Component {
                   }}
                   value={this.state.playerchips}></input>
                 <button onClick={this.handleAdd} className="btn btn-default">ADD</button>
-              </div>
+              </form>
               {this
                 .state
                 .players
